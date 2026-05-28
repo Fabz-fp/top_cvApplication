@@ -3,11 +3,11 @@ import GeneralInfo from './components/GeneralInfo';
 
 function App() {
   return (
-    <div>
+    <main className='app'>
       <h1>CV Application</h1>
 
       <GeneralInfo />
-    </div>
+    </main>
   );
 }
 
