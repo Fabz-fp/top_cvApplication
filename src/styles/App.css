@@ -54,10 +54,14 @@ input {
     border: 1px solid #d1d5db;
     border-radius: 6px;
     font-size: 1rem;
+    background-color: white;
 }
 input:focus {
     outline: none;
     border-color: #2563eb;
+}
+input[type='date'] {
+    color: #1f2937;
 }
 button {
     width: fit-content;
@@ -72,6 +76,11 @@ button {
 button:hover {
     background-color: #1d4ed8;
 }
+input,
+button {
+    font: inherit;
+}
 p {
     margin-bottom: 16px;
+    font-size: 1.2rem;
 }
