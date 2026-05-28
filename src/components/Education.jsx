@@ -34,9 +34,9 @@ function Education() {
 
                 <form onSubmit={handleSubmit}>
                     <div>
-                        <label htmlFor="school">School Name</label>
+                        <label htmlFor='school'>School Name</label>
                         <input 
-                            type="text"
+                            type='text'
                             id='school'
                             name='school'
                             value={educationInfo.school}
@@ -45,22 +45,22 @@ function Education() {
                     </div>
 
                     <div>
-                        <label htmlFor="studyTitle">Title of Study</label>
+                        <label htmlFor='studyTitle'>Title of Study</label>
                         <input
-                            type="text"
-                            id="studyTitle"
-                            name="studyTitle"
+                            type='text'
+                            id='studyTitle'
+                            name='studyTitle'
                             value={educationInfo.studyTitle}
                             onChange={handleChange}
                         />
                     </div>
 
                     <div>
-                        <label htmlFor="studyDate">Date of Study</label>
+                        <label htmlFor='studyDate'>Date of Study</label>
                         <input
-                            type="date"
-                            id="studyDate"
-                            name="studyDate"
+                            type='date'
+                            id='studyDate'
+                            name='studyDate'
                             value={educationInfo.studyDate}
                             onChange={handleChange}
                         />

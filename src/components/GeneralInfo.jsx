@@ -34,9 +34,9 @@ function GeneralInfo() {
 
                 <form onSubmit={handleSubmit}>
                     <div>
-                        <label htmlFor="name">Name</label>
+                        <label htmlFor='name'>Name</label>
                         <input 
-                            type="text"
+                            type='text'
                             id='name'
                             name='name'
                             value={generalInfo.name}
@@ -45,9 +45,9 @@ function GeneralInfo() {
                     </div>
 
                     <div>
-                        <label htmlFor="email">Email</label>
+                        <label htmlFor='email'>Email</label>
                         <input
-                            type="email"
+                            type='email'
                             id='email'
                             name='email'
                             value={generalInfo.email}
@@ -56,9 +56,9 @@ function GeneralInfo() {
                     </div>
 
                     <div>
-                        <label htmlFor="phone">Phone Number</label>
+                        <label htmlFor='phone'>Phone Number</label>
                         <input
-                            type="tel"
+                            type='tel'
                             id='phone'
                             name='phone'
                             value={generalInfo.phone}
