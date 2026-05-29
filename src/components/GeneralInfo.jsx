@@ -39,6 +39,7 @@ function GeneralInfo() {
                             type='text'
                             id='name'
                             name='name'
+                            placeholder='John Doe'
                             value={generalInfo.name}
                             onChange={handleChange}
                         />
@@ -50,6 +51,7 @@ function GeneralInfo() {
                             type='email'
                             id='email'
                             name='email'
+                            placeholder='john.d@email.com'
                             value={generalInfo.email}
                             onChange={handleChange}
                         />
@@ -61,6 +63,7 @@ function GeneralInfo() {
                             type='tel'
                             id='phone'
                             name='phone'
+                            placeholder='555-555-5555'
                             value={generalInfo.phone}
                             onChange={handleChange}
                         />
@@ -76,17 +79,20 @@ function GeneralInfo() {
         <section>
             <h2>General Information</h2>
 
-            <p>
-                <strong>Name:</strong> {generalInfo.name}
-            </p>
+            <div className='info-group'>
+                <span className='info-label'>Name</span>
+                <p>{generalInfo.name}</p>
+            </div>
 
-            <p>
-                <strong>Email:</strong> {generalInfo.email}
-            </p>
-
-            <p>
-                <strong>Phone:</strong> {generalInfo.phone}
-            </p>
+            <div className='info-group'>
+                <span className='info-label'>Email</span>
+                <p>{generalInfo.email}</p>
+            </div>
+            
+            <div className='info-group'>
+                <span className='info-label'>Phone</span>
+                <p>{generalInfo.phone}</p>
+            </div>
 
             <button onClick={handleEdit}>Edit</button>
         </section>

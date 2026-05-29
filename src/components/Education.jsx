@@ -6,7 +6,8 @@ function Education() {
     const [educationInfo, setEducationInfo] = useState({
         school: '',
         studyTitle: '',
-        studyDate: ''
+        startYear: '',
+        graduationYear: '',
     });
 
     function handleChange(e) {
@@ -39,6 +40,7 @@ function Education() {
                             type='text'
                             id='school'
                             name='school'
+                            placeholder='University of Chicago'
                             value={educationInfo.school}
                             onChange={handleChange}
                         />
@@ -50,18 +52,36 @@ function Education() {
                             type='text'
                             id='studyTitle'
                             name='studyTitle'
+                            placeholder='Business Administration'
                             value={educationInfo.studyTitle}
                             onChange={handleChange}
                         />
                     </div>
 
                     <div>
-                        <label htmlFor='studyDate'>Date of Study</label>
+                        <label htmlFor='startYear'>Start Year</label>
                         <input
-                            type='date'
-                            id='studyDate'
-                            name='studyDate'
-                            value={educationInfo.studyDate}
+                            type='number'
+                            id='startYear'
+                            name='startYear'
+                            placeholder='2020'
+                            min={1950}
+                            max={2026}
+                            value={educationInfo.startYear}
+                            onChange={handleChange}
+                        />
+                    </div>
+
+                    <div>
+                        <label htmlFor='graduationYear'>Graduation Year</label>
+                        <input
+                            type='number'
+                            id='graduationYear'
+                            name='graduationYear'
+                            placeholder='2025'
+                            min={1950}
+                            max={2026}
+                            value={educationInfo.graduationYear}
                             onChange={handleChange}
                         />
                     </div>
@@ -76,22 +96,28 @@ function Education() {
         <section>
             <h2>Educational Experience</h2>
 
-            <p>
-                <strong>School:</strong> {educationInfo.school}
-            </p>
+            <div className='info-group'>
+                <span className='info-label'>School</span>
+                <p>{educationInfo.school}</p>
+            </div>
 
-            <p>
-                <strong>Title of Study:</strong> {educationInfo.studyTitle}
-            </p>
+            <div className='info-group'>
+                <span className='info-label'>Title of Study</span>
+                <p>{educationInfo.studyTitle}</p>
+            </div>
 
-            <p>
-                <strong>Date:</strong> {educationInfo.studyDate}
-            </p>
+            <div className='info-group'>
+                <span className='info-label'>Years Attended</span>
+                <p>
+                    {educationInfo.startYear
+                        ? `${educationInfo.startYear} - ${educationInfo.graduationYear}`
+                        : educationInfo.graduationYear}
+                </p>
+            </div>
 
             <button onClick={handleEdit}>Edit</button>
         </section>
     );
-
 }
 
 export default Education;

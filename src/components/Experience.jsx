@@ -41,6 +41,7 @@ function Experience() {
                             type='text'
                             id='companyName'
                             name='companyName'
+                            placeholder='Business Inc.'
                             value={experienceInfo.companyName}
                             onChange={handleChange}
                         />
@@ -52,6 +53,7 @@ function Experience() {
                             type='positionTitle'
                             id='positionTitle'
                             name='positionTitle'
+                            placeholder='Project manager'
                             value={experienceInfo.positionTitle}
                             onChange={handleChange}
                         />
@@ -62,6 +64,7 @@ function Experience() {
                         <textarea
                             id='responsibilities'
                             name='responsibilities'
+                            placeholder='I was responsible for a team of 5 people...'
                             value={experienceInfo.responsibilities}
                             onChange={handleChange}
                             rows='5'
@@ -100,26 +103,30 @@ function Experience() {
         <section>
             <h2>Practical Experience</h2>
 
-            <p>
-                <strong>Company:</strong> {experienceInfo.companyName}
-            </p>
+            <div className='info-group'>
+                <span className='info-label'>Company</span> 
+                <p>{experienceInfo.companyName}</p>
+            </div>
 
-            <p>
-                <strong>Position:</strong> {experienceInfo.positionTitle}
-            </p>
+            <div className='info-group'>
+                <span className='info-label'>Position</span> 
+                <p>{experienceInfo.positionTitle}</p>
+            </div>
 
-            <p>
-                <strong>Responsibilities:</strong>
-            </p>
+            <div className='info-group'>
+                <span className='info-label'>Responsibilities</span>
+            </div>
             <p>{experienceInfo.responsibilities}</p>
 
-            <p>
-                <strong>From:</strong> {experienceInfo.dateFrom}
-            </p>
+            <div className='info-group'>
+                <span className='info-label'>From</span> 
+                <p>{experienceInfo.dateFrom}</p>
+            </div>
 
-            <p>
-                <strong>Until:</strong> {experienceInfo.dateUntil}
-            </p>
+            <div className='info-group'>
+                <span className='info-label'>Until</span> 
+                <p>{experienceInfo.dateUntil}</p>
+            </div>
 
             <button onClick={handleEdit}>Edit</button>
         </section>
